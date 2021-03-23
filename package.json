@@ -1,0 +1,19 @@
+{
+    "name": "porcelain-shawl",
+    "version": "0.0.1",
+    "description": "Small project for learning Vue.js",
+    "main": "index.js",
+    "scripts": {
+        "start": ""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/menkuichan/porcelain-shawl.git"
+    },
+    "author": "Ilona Salomenskaya",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/menkuichan/porcelain-shawl/issues"
+    },
+    "homepage": "https://github.com/menkuichan/porcelain-shawl#readme"
+}
