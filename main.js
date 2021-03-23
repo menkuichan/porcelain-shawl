@@ -10,11 +10,13 @@ const app = new Vue({
         variants: [{
                 id: 0,
                 color: 'white with black stripes',
+                colorCode: '#B3B3B3',
                 image: './assets/Socks-White.jpg'
             },
             {
                 id: 1,
                 color: 'white with butterfly',
+                colorCode: '#B0D6D3',
                 image: './assets/Socks-Butterfly.jpg'
             },
         ],

@@ -30,7 +30,7 @@
                 <p>
                     Available colors:</p>
                 <ul>
-                    <li class='product-color' v-for='variant in variants' @mouseover='updateImage(variant.image)'>
+                    <li class='product-color' v-for='variant in variants' :style='{ color: variant.colorCode }' @mouseover='updateImage(variant.image)'>
                         {{ variant.color }}
                     </li>
                 </ul>
