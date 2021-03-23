@@ -2,22 +2,25 @@ const app = new Vue({
     el: '#app',
     data: {
         product: 'Socks',
-        image: './assets/Socks-White.jpg',
+        brand: 'MenkuiChan',
         logo: './assets/Logo.png',
-        inventory: 18,
-        onSale: true,
+        selectedVariant: 0,
         details: ['80% cotton', '20% polyester', 'Gender-neutral'],
         variants: [{
                 id: 0,
                 color: 'white with black stripes',
-                colorCode: '#B3B3B3',
-                image: './assets/Socks-White.jpg'
+                colorCode: '#999999',
+                image: './assets/Socks-White.jpg',
+                quantity: 13,
+                onSale: false,
             },
             {
                 id: 1,
                 color: 'white with butterfly',
-                colorCode: '#B0D6D3',
-                image: './assets/Socks-Butterfly.jpg'
+                colorCode: '#9BBDBA',
+                image: './assets/Socks-Butterfly.jpg',
+                quantity: 8,
+                onSale: true,
             },
         ],
         cart: 0,
@@ -29,8 +32,22 @@ const app = new Vue({
         removeFromCart() {
             if (this.cart > 0) this.cart -= 1
         },
-        updateImage(newImage) {
-            this.image = newImage
+        updateImage(index) {
+            this.selectedVariant = index
         }
     },
+    computed: {
+        title() {
+            return `${this.brand} ${this.product}`
+        },
+        image() {
+            return this.variants[this.selectedVariant].image
+        },
+        inStock() {
+            return this.variants[this.selectedVariant].quantity
+        },
+        onSale() {
+            return this.variants[this.selectedVariant].onSale
+        }
+    }
 })

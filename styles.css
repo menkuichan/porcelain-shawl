@@ -32,6 +32,7 @@ body {
 }
 
 .product {
+    position: relative;
     margin-top: 80px;
     display: flex;
     flex-direction: row;
@@ -51,6 +52,13 @@ body {
 
 .image {
     width: 200px;
+}
+
+.sale {
+    color: #EC6373;
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
 .product-image {}
