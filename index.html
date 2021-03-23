@@ -14,31 +14,7 @@
             <img class='logo' :src='logo'>
             <span class='title'>Porcelain Shawl</span>
         </div>
-        <div class='product'>
-            <div class='product-image'>
-                <img class='image' :src='image'>
-            </div>
-            <div class='product-info'>
-                <span class='sale' v-show='onSale'>On Sale!</span>
-                <h1>{{ title }}</h1>
-                <p v-if='inStock > 10'>In Stock: {{ inStock }}</p>
-                <p v-else-if='inStock > 0'>Almost sold out!</p>
-                <p v-else>Out of Stock</p>
-                <ul>
-                    <li v-for='detail in details'>{{ detail }}</li>
-                </ul>
-                <p>
-                    Available colors:</p>
-                <ul>
-                    <li class='product-color' v-for='(variant, index) in variants' :style='{ color: variant.colorCode }' @mouseover='updateImage(index)'>
-                        {{ variant.color }}
-                    </li>
-                </ul>
-                <button @click='addToCart' :disabled='!inStock'>Add to Cart</button>
-                <button @click='removeFromCart' :disabled='!inStock'>Remove from Cart</button>
-                <p>At Cart: {{ cart }}</p>
-            </div>
-        </div>
+        <product></product>
     </div>
 
     <script src='https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js'></script>
